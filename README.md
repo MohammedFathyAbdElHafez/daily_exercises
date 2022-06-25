@@ -66,12 +66,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Getting started
 
 Clone the Repo:
-> git clone https://github.com/MohammedFathyAbdElHafez/daily_exercises.git
-> cd daily_exercises
-> composer install
-> cp .env.example .env
-> Set up .env file
-> php artisan key:generate
-> php artisan storage:link
-> php artisan serve
+1. git clone https://github.com/MohammedFathyAbdElHafez/daily_exercises.git
+1. cd daily_exercises
+1. composer install
+1. cp .env.example .env
+1. Set up .env file
+1. php artisan key:generate
+1. php artisan storage:link
+1. php artisan serve
 http://127.0.0.1:8000/
