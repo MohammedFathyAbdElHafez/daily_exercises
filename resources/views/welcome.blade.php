@@ -46,28 +46,41 @@
 
             @if(isset($exercises))
 
-            <div class="col-md-8 mt-5">
 
-                <table class="table table-bordered">
-                    <thead class="table-dark">
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Hours</th>
-                        <th>Minutes</th>
-                    </thead>
-                    <tbody>
-                        @foreach($exercises as $exercise)
-                        <tr>
-                            <td>{{$exercise->id}} </td>
-                            <td>{{$exercise->name}} </td>
-                            <td>{{$exercise->hours}} </td>
-                            <td>{{$exercise->minutes}} </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+            <div class="row mt-5 d-flex justify-content-center align-items-center">
+                <div class="col-md-4">
+
+                    <table class="table table-bordered">
+                        <thead class="table-dark">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Hours</th>
+                            <th>Minutes</th>
+                        </thead>
+                        <tbody>
+                            @foreach($exercises as $exercise)
+                            <tr>
+                                <td>{{$exercise->id}} </td>
+                                <td>{{$exercise->name}} </td>
+                                <td>{{$exercise->hours}} </td>
+                                <td>{{$exercise->minutes}} </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-4">
+                    <h4> Calculate number of days</h4>
+
+                    <form action="{{ url('calculate/days') }}" method="post">
+                    @csrf
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary text-center">Calculate</button>
+                    </div>
+                </form>
+                </div>
             </div>
-
             @endif
 
 
