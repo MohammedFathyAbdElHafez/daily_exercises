@@ -18,3 +18,7 @@ Route::get('/',[ExercisesController::class,'index']);
 
 
 Route::post('/store/exercises',[ExercisesController::class,'store_exercises']);
+
+Route::post('/calculate/days',[ExercisesController::class,'calculate_days']);
+
+
